@@ -4,19 +4,22 @@
   "events": {
     "Stop": {
       "enabled": true,
-      "sound": "Blow"
+      "sound": "Blow",
+      "emoji": "✅"
     },
     "PermissionRequest": {
       "enabled": true,
-      "sound": "Funk"
+      "sound": "Funk",
+      "emoji": "🔐"
     },
     "Notification": {
       "enabled": true,
       "sound": "Funk",
+      "emoji": "💬",
       "types": {
-        "error": { "sound": "Sosumi" },
-        "warning": { "sound": "Sosumi" },
-        "success": { "sound": "Glass" }
+        "error": { "sound": "Sosumi", "emoji": "❌" },
+        "warning": { "sound": "Sosumi", "emoji": "⚠️" },
+        "success": { "sound": "Glass", "emoji": "✅" }
       }
     }
   }

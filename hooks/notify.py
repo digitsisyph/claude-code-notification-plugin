@@ -25,9 +25,9 @@ DEFAULT_CONFIG = {
     "sound": True,
     "notification": True,
     "events": {
-        "Stop": {"enabled": True, "sound": "Blow"},
-        "PermissionRequest": {"enabled": True, "sound": "Funk"},
-        "Notification": {"enabled": True, "sound": "Funk"}
+        "Stop": {"enabled": True, "sound": "Blow", "emoji": "✅"},
+        "PermissionRequest": {"enabled": True, "sound": "Funk", "emoji": "🔐"},
+        "Notification": {"enabled": True, "sound": "Funk", "emoji": "💬"}
     }
 }
 
@@ -194,17 +194,22 @@ def main():
         # Get folder name for title
         cwd = hook_data.get("cwd", "")
         folder_name = os.path.basename(cwd) if cwd else "Unknown"
-        title = f"Claude in {folder_name}"
+
+        # Get emoji and sound (with type-specific override for Notification)
+        emoji = event_config.get("emoji", "")
+        sound_name = event_config.get("sound", "Funk")
+        if event_name == "Notification":
+            notification_type = hook_data.get("notification_type", "")
+            types_config = event_config.get("types", {})
+            if notification_type and notification_type in types_config:
+                type_config = types_config[notification_type]
+                emoji = type_config.get("emoji", emoji)
+                sound_name = type_config.get("sound", sound_name)
+
+        title = f"{emoji} Claude in {folder_name}" if emoji else f"Claude in {folder_name}"
 
         # Play sound
         if config.get("sound", True):
-            sound_name = event_config.get("sound", "Funk")
-            # For Notification events, check for type-specific sound
-            if event_name == "Notification":
-                notification_type = hook_data.get("notification_type", "")
-                types_config = event_config.get("types", {})
-                if notification_type and notification_type in types_config:
-                    sound_name = types_config[notification_type].get("sound", sound_name)
             play_sound(sound_name)
 
         # Show notification
