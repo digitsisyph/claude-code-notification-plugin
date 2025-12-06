@@ -38,12 +38,6 @@ brew install terminal-notifier
 /plugin uninstall claude-code-notification
 ```
 
-## 更新
-
-```
-/plugin update claude-code-notification
-```
-
 ## 定制化
 
 安装后，可以编辑插件目录中的 `config.json` 来改变是否播放声音等设置：

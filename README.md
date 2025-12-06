@@ -38,12 +38,6 @@ In Claude Code, run:
 /plugin uninstall claude-code-notification
 ```
 
-## Update
-
-```
-/plugin update claude-code-notification
-```
-
 ## Customization
 
 After installation, edit `config.json` in the plugin directory for Customization:
