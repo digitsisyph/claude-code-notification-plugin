@@ -1,0 +1,43 @@
+{
+  "name": "claude-code-notification",
+  "version": "1.0.0",
+  "description": "macOS sound and notification alerts for Claude Code events",
+  "author": {
+    "name": "digitsisyph"
+  },
+  "repository": "https://github.com/digitsisyph/claude-code-notification-plugin",
+  "license": "MIT",
+  "keywords": ["notification", "macos", "sound", "alert"],
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/notify.py"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/notify.py"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/notify.py"
+          }
+        ]
+      }
+    ]
+  }
+}

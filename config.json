@@ -1,0 +1,23 @@
+{
+  "sound": true,
+  "notification": true,
+  "events": {
+    "Stop": {
+      "enabled": true,
+      "sound": "Blow"
+    },
+    "PermissionRequest": {
+      "enabled": true,
+      "sound": "Funk"
+    },
+    "Notification": {
+      "enabled": true,
+      "sound": "Funk",
+      "types": {
+        "error": { "sound": "Sosumi" },
+        "warning": { "sound": "Sosumi" },
+        "success": { "sound": "Glass" }
+      }
+    }
+  }
+}
