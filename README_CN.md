@@ -6,6 +6,8 @@
 
 [English](README.md)
 
+![通知示例](assets/notification-demo.png)
+
 ## 功能
 
 - **声音提醒** - 播放 macOS 系统声音
@@ -53,19 +55,22 @@ brew install terminal-notifier
   "events": {
     "Stop": {
       "enabled": true,
-      "sound": "Blow"
+      "sound": "Blow",
+      "emoji": "✅"
     },
     "PermissionRequest": {
       "enabled": true,
-      "sound": "Funk"
+      "sound": "Funk",
+      "emoji": "🔐"
     },
     "Notification": {
       "enabled": true,
       "sound": "Funk",
+      "emoji": "💬",
       "types": {
-        "error": { "sound": "Sosumi" },
-        "warning": { "sound": "Sosumi" },
-        "success": { "sound": "Glass" }
+        "error": { "sound": "Sosumi", "emoji": "❌" },
+        "warning": { "sound": "Sosumi", "emoji": "⚠️" },
+        "success": { "sound": "Glass", "emoji": "✅" }
       }
     }
   }
@@ -80,7 +85,8 @@ brew install terminal-notifier
 | `notification` | 全局通知开关 | `true` |
 | `events.*.enabled` | 单个事件开关 | `true` |
 | `events.*.sound` | 单个事件声音 | 见上 |
-| `events.Notification.types` | 按类型设置声音 | 可选 |
+| `events.*.emoji` | 通知标题前的 emoji | 见上 |
+| `events.Notification.types` | 按类型设置声音和 emoji | 可选 |
 
 ### 可用声音
 

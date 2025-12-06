@@ -6,6 +6,8 @@ A minimal Claude Code plugin that adds sound and notification alerts on macOS.
 
 Get notified when Claude Code completes a task or needs your permission.
 
+![Notification Demo](assets/notification-demo.png)
+
 ## Features
 
 - **Sound alerts** - plays macOS system sounds
@@ -53,19 +55,22 @@ After installation, edit `config.json` in the plugin directory for Customization
   "events": {
     "Stop": {
       "enabled": true,
-      "sound": "Blow"
+      "sound": "Blow",
+      "emoji": "✅"
     },
     "PermissionRequest": {
       "enabled": true,
-      "sound": "Funk"
+      "sound": "Funk",
+      "emoji": "🔐"
     },
     "Notification": {
       "enabled": true,
       "sound": "Funk",
+      "emoji": "💬",
       "types": {
-        "error": { "sound": "Sosumi" },
-        "warning": { "sound": "Sosumi" },
-        "success": { "sound": "Glass" }
+        "error": { "sound": "Sosumi", "emoji": "❌" },
+        "warning": { "sound": "Sosumi", "emoji": "⚠️" },
+        "success": { "sound": "Glass", "emoji": "✅" }
       }
     }
   }
@@ -80,7 +85,8 @@ After installation, edit `config.json` in the plugin directory for Customization
 | `notification` | Enable/disable all notifications | `true` |
 | `events.*.enabled` | Enable/disable specific event | `true` |
 | `events.*.sound` | Sound for specific event | varies |
-| `events.Notification.types` | Type-specific sounds | optional |
+| `events.*.emoji` | Emoji prefix in notification title | varies |
+| `events.Notification.types` | Type-specific sounds and emojis | optional |
 
 ### Available Sounds
 
