@@ -26,7 +26,8 @@ brew install terminal-notifier
 在 Claude Code 中运行：
 
 ```
-/plugin install github:digitsisyph/claude-code-notification-plugin
+/plugin marketplace add digitsisyph/claude-code-notification-plugin
+/plugin install claude-code-notification
 ```
 
 ## 卸载
@@ -41,9 +42,9 @@ brew install terminal-notifier
 /plugin update claude-code-notification
 ```
 
-## 配置
+## 定制化
 
-安装后，编辑插件目录中的 `config.json`：
+安装后，可以编辑插件目录中的 `config.json` 来改变是否播放声音等设置：
 
 ```json
 {
@@ -52,17 +53,17 @@ brew install terminal-notifier
   "events": {
     "Stop": {
       "enabled": true,
-      "sound": "Hero"
+      "sound": "Blow"
     },
     "PermissionRequest": {
       "enabled": true,
-      "sound": "Basso"
+      "sound": "Funk"
     },
     "Notification": {
       "enabled": true,
       "sound": "Funk",
       "types": {
-        "error": { "sound": "Basso" },
+        "error": { "sound": "Sosumi" },
         "warning": { "sound": "Sosumi" },
         "success": { "sound": "Glass" }
       }

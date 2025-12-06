@@ -26,7 +26,8 @@ brew install terminal-notifier
 In Claude Code, run:
 
 ```
-/plugin install github:digitsisyph/claude-code-notification-plugin
+/plugin marketplace add digitsisyph/claude-code-notification-plugin
+/plugin install claude-code-notification
 ```
 
 ## Uninstallation
@@ -41,9 +42,9 @@ In Claude Code, run:
 /plugin update claude-code-notification
 ```
 
-## Configuration
+## Customization
 
-After installation, edit `config.json` in the plugin directory:
+After installation, edit `config.json` in the plugin directory for Customization:
 
 ```json
 {
@@ -52,17 +53,17 @@ After installation, edit `config.json` in the plugin directory:
   "events": {
     "Stop": {
       "enabled": true,
-      "sound": "Hero"
+      "sound": "Blow"
     },
     "PermissionRequest": {
       "enabled": true,
-      "sound": "Basso"
+      "sound": "Funk"
     },
     "Notification": {
       "enabled": true,
       "sound": "Funk",
       "types": {
-        "error": { "sound": "Basso" },
+        "error": { "sound": "Sosumi" },
         "warning": { "sound": "Sosumi" },
         "success": { "sound": "Glass" }
       }
