@@ -106,6 +106,13 @@ brew install terminal-notifier
 
 本插件使用 [Claude Code hooks](https://code.claude.com/docs/en/hooks) 在特定事件发生时触发 Python 脚本，播放系统声音并显示通知。
 
+## 灵感来源
+
+本项目受以下内容启发：
+
+- [wyattjoh/claude-code-notification](https://github.com/wyattjoh/claude-code-notification)
+- [Using terminal-notifier for Claude Code custom notifications](https://www.andreagrandi.it/posts/using-terminal-notifier-claude-code-custom-notifications/) - Andrea Grandi
+
 ## 许可证
 
 MIT

@@ -106,6 +106,13 @@ Any `.aiff` file in `/System/Library/Sounds/`:
 
 This plugin uses [Claude Code hooks](https://code.claude.com/docs/en/hooks) to trigger a Python script when specific events occur. The script plays a system sound and shows a notification.
 
+## Inspiration
+
+This project was inspired by:
+
+- [wyattjoh/claude-code-notification](https://github.com/wyattjoh/claude-code-notification)
+- [Using terminal-notifier for Claude Code custom notifications](https://www.andreagrandi.it/posts/using-terminal-notifier-claude-code-custom-notifications/) by Andrea Grandi
+
 ## License
 
 MIT
